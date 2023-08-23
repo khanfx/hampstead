@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative 'features/reports/report_creator'
+require_relative 'data/reportdb'
 
 # Theoretically could add testing this way
 # https://sinatrarb.com/testing.html
@@ -12,9 +13,10 @@ class ReportApp < Sinatra::Base
     'Welcome to the report server.'
   end
 
-  post '/reports' do
-    service = ReportCreator.new
-    service.post
+  post '/reports' do |body|
+    db = ReportDb.new
+    service = ReportCreator.new db
+    service.post body
   end
 
   get '/reports/:id' do
