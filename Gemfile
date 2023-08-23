@@ -8,4 +8,5 @@ gem "rack", "~> 2.2"
 
 group :development, :test do
     gem "rspec", "~> 3.12"
+    gem "solargraph"
 end

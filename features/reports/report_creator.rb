@@ -6,7 +6,7 @@ class ReportCreator
     @reportdb = reportdb
   end
 
-  def post
+  def post(body)
     # TODO: validate & set up the call
     @reportdb.save_report 'fake new title'
     'Report Created'
