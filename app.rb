@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require 'features/reports/report_creator'
+require_relative 'features/reports/report_creator'
 
 # Theoretically could add testing this way
 # https://sinatrarb.com/testing.html
