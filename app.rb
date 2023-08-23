@@ -13,10 +13,10 @@ class ReportApp < Sinatra::Base
     'Welcome to the report server.'
   end
 
-  post '/reports' do |body|
+  post '/reports' do
     db = ReportDb.new
     service = ReportCreator.new db
-    service.post body
+    service.post request.body
   end
 
   get '/reports/:id' do

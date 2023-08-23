@@ -10,3 +10,5 @@ group :development, :test do
     gem "rspec", "~> 3.12"
     gem "solargraph"
 end
+
+gem "rack-contrib", "~> 2.3"

@@ -8,6 +8,7 @@ class ReportCreator
 
   def post(body)
     # TODO: validate & set up the call
+    puts "body #{body}"
     @reportdb.save_report 'fake new title'
     'Report Created'
   end

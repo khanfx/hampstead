@@ -16,3 +16,4 @@ Plan:
   - Background job reads from ReportRequest and creates ReportResult, access w a GET
     - Also generate event via websocket or SSE (look at Faye)
 
+https://github.com/ruby/rbs
